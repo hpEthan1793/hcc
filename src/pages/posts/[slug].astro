@@ -4,7 +4,7 @@ import Layout from "../../layouts/Layout.astro";
 const { slug } = Astro.params;
 
 let res = await fetch(
-  `https://hermanuschessclub.co.za/wp-json/wp/v2/posts?slug=${slug}`
+  `https://wp.hermanuschessclub.co.za/wp-json/wp/v2/posts?slug=${slug}`
 );
 let [post] = await res.json();
 
