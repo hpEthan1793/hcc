@@ -1,0 +1,78 @@
+---
+import Header from "../components/Header.jsx";
+import Footer from "../components/Footer.jsx";
+
+export interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<link
+			rel="apple-touch-icon"
+			sizes="180x180"
+			href="/apple-touch-icon.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="32x32"
+			href="/favicon-32x32.png"
+		/>
+		<link
+			rel="icon"
+			type="image/png"
+			sizes="16x16"
+			href="/favicon-16x16.png"
+		/>
+		<link rel="manifest" href="/site.webmanifest" />
+
+		<meta name="title" content="Home - Hermanus Chess Club" />
+		<meta
+			name="description"
+			content="The Hermanus Chess Club was established in 2016 and has been growing ever since. Join us every Thursday at the Hermanus Sports Club"
+		/>
+
+		<meta property="og:type" content="website" />
+		<meta property="og:title" content={title} />
+		<meta
+			property="og:description"
+			content="The Hermanus Chess Club was established in 2016 and has been growing ever since. Join us every Thursday at the Hermanus Sports Club"
+		/>
+		<meta property="og:image" content="/banner.jpeg" />
+
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:title" content={title} />
+		<meta
+			property="twitter:description"
+			content="The Hermanus Chess Club was established in 2016 and has been growing ever since. Join us every Thursday at the Hermanus Sports Club"
+		/>
+		<meta property="twitter:image" content="/banner.jpeg" />
+	</head>
+	<Header client:load title={title} />
+	<body>
+		<div class="lg:w-4/5 w-5/6 mx-auto">
+			<slot />
+		</div>
+	</body>
+	<Footer />
+
+	<style is:global>
+		* {
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+		}
+	</style>
+
+
+</html>

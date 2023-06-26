@@ -1,0 +1,38 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+const { slug } = Astro.params;
+
+let res = await fetch(
+  `https://hermanuschessclub.co.za/wp-json/wp/v2/posts?slug=${slug}`
+);
+let [post] = await res.json();
+
+// The getStaticPaths() is required for static Astro sites.
+// If using SSR, you will not need this function.
+export async function getStaticPaths() {
+  let data = await fetch("https://hermanuschessclub.co.za/wp-json/wp/v2/posts");
+  let posts = await data.json();
+
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post: post },
+  }));
+}
+---
+
+<Layout title={post.title.rendered}>
+  <h1
+    set:html={post.title.rendered}
+    class="text-4xl font-extrabold text-center m-2"
+  />
+  <div class="flex items-center justify-center gap-2">
+    <h2 set:html={post.yoast_head_json.author} />
+    <div>|</div>
+    <h2 set:html={post.date.substring(0, 10)} />
+  </div>
+  <hr class="m-8 border border-1 border-gray-900" />
+  <article class="prose overflow-hidden mx-auto">
+    <Fragment set:html={post.content.rendered} />
+  </article>
+</Layout>

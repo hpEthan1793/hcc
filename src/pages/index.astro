@@ -1,0 +1,139 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Hero from "../components/Hero.jsx";
+import Team from "../components/Team.jsx";
+import SinglePost from "../components/SinglePost";
+
+let res = await fetch(
+    "https://hermanuschessclub.co.za/wp-json/wp/v2/posts?per_page=1&_embed"
+);
+let posts = await res.json();
+---
+
+<Layout title="The Home Of Chess In Hermanus">
+    <Hero />
+    <div class="lg:flex gap-2 my-4">
+        <div>
+            <h1
+                class="text-xl text-gray-800 font-extrabold sm:text-3xl text-center py-4"
+            >
+                Our History
+            </h1>
+            <img
+                src="/hcc_01.jpg"
+                class="p-6 rounded-lg h-96 w-full object-cover"
+            />
+            <p>
+                The Hermanus Chess Club was first founded in 2016, and has been
+                growing ever since. We have competed in numerous club
+                championships and matches, such as the Overberg Chess Leauge and
+                Western Cape Club Championship. We afilliated with the Hermanus
+                Sports Club in 2021 and have been playing there ever since on
+                Thursday afternoons. Our goal has always been to grow the sport
+                and share the love of the game, and we will continue to do so in
+                Hermanus and the greater Overberg.
+            </p>
+        </div>
+        <div class="flex justify-center">
+            <div class="w-96">
+                <h1
+                    class="text-xl text-gray-800 font-extrabold sm:text-3xl text-center py-4"
+                >
+                    Daily Puzzle
+                </h1>
+                <iframe
+                    src="https://lichess.org/training/frame?theme=blue&bg=light"
+                    style="width: 100%; height: 440px; min-width: 350px"
+                    allowtransparency="true"
+                    frameborder="0"></iframe>
+            </div>
+        </div>
+    </div>
+
+    <h1
+        class="text-xl text-gray-800 font-extrabold sm:text-3xl text-center py-4"
+    >
+        Read our latest news article
+    </h1>
+    <div>
+        {
+            posts.map((post) => (
+                <>
+                    <div class="md:flex mx-auto mt-4 shadow-lg border rounded-md duration-300 hover:shadow-sm">
+                        <div class="basis-1/2">
+                            <a href={`/posts/${post.slug}`}>
+                                <img
+                                    src={
+                                        post._embedded["wp:featuredmedia"]["0"]
+                                            .source_url
+                                    }
+                                    loading="lazy"
+                                    alt={post.title.rendered}
+                                    class="h-full rounded-t-md object-cover"
+                                />
+                            </a>
+                        </div>
+                        <div class="basis-1/2">
+                            <div>
+                                <div class="pt-3 ml-4 mr-2 mb-3">
+                                    <h3 class="text-4xl text-gray-900 font-bold">
+                                        {post.title.rendered}
+                                    </h3>
+                                    <div class="flex items-center mt-2 pt-3 ml-4 mr-2">
+                                        <div class="flex-none w-10 h-10 rounded-full">
+                                            <img
+                                                src="/chess-king-solid.svg"
+                                                class="w-full h-full rounded-full"
+                                                alt={
+                                                    post.yoast_head_json.author
+                                                }
+                                            />
+                                        </div>
+                                        <div class="ml-3">
+                                            <span class="block text-gray-900">
+                                                {post.yoast_head_json.author}
+                                            </span>
+                                            <span class="block text-gray-400 text-sm">
+                                                {post.date.substring(0, 10)}
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <p
+                                        class="text-gray-400 text-sm mt-1"
+                                        set:html={post.excerpt.rendered}
+                                    />
+                                </div>
+                                <div class="ml-4">
+                                    <a href={`/posts/${post.slug}`}>
+                                        <button class="px-4 py-2 text-white bg-[#da2c26] rounded-lg duration-150 hover:bg-indigo-700 active:shadow-lg">
+                                            Read More
+                                        </button>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </>
+            ))
+        }
+    </div>
+    <div class="my-4">
+        <Team />
+    </div>
+    <h3 class="text-2xl text-gray-800 font-extrabold sm:text-3xl">
+        Where To Find Us
+    </h3>
+    <div class="my-4 flex justify-center">
+        <iframe
+            width="100%"
+            height="450px"
+            style="border:0"
+            loading="lazy"
+            allowfullscreen
+            referrerpolicy="no-referrer-when-downgrade"
+            src="https://www.google.com/maps/embed/v1/place?key=AIzaSyDlawQ55mcYDyiKmfSIIxBsOrY1QO0x8gQ
+    &q=Hermanus+Chess+Club"
+        >
+        </iframe>
+    </div>
+</Layout>

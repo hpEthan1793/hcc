@@ -1,0 +1,51 @@
+---
+import Layout from "../layouts/Layout.astro";
+
+let res = await fetch(
+  "https://hermanuschessclub.co.za/wp-json/wp/v2/posts?per_page=100&_embed"
+);
+let posts = await res.json();
+---
+
+<Layout title="News">
+  <section>
+    <div class="mt-12 grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
+      {
+        posts.map((post) => (
+          <article class="max-w-md mx-auto mt-4 shadow-lg border rounded-md duration-300 hover:shadow-sm">
+            <a href={`/posts/${post.slug}`}>
+              <img
+                src={post._embedded["wp:featuredmedia"]["0"].source_url}
+                loading="lazy"
+                alt={post.title.rendered}
+                class="w-full h-48 rounded-t-md object-cover"
+              />
+              <div class="flex items-center mt-2 pt-3 ml-4 mr-2">
+                <div class="flex-none w-10 h-10 rounded-full">
+                  <img
+                    src="/chess-king-solid.svg"
+                    class="w-full h-full rounded-full"
+                    alt={post.yoast_head_json.author}
+                  />
+                </div>
+                <div class="ml-3">
+                  <span class="block text-gray-900">
+                    {post.yoast_head_json.author}
+                  </span>
+                  <span class="block text-gray-400 text-sm">{post.date}</span>
+                </div>
+              </div>
+              <div class="pt-3 ml-4 mr-2 mb-3">
+                <h3 class="text-xl text-gray-900">{post.title.rendered}</h3>
+                <p
+                  class="text-gray-400 text-sm mt-1"
+                  set:html={post.yoast_head_json.og_description}
+                />
+              </div>
+            </a>
+          </article>
+        ))
+      }
+    </div>
+  </section>
+</Layout>
