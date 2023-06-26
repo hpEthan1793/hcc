@@ -3,7 +3,6 @@ import { useState } from "react";
 export default (props) => {
   const [state, setState] = useState(false);
 
-  // Replace javascript:void(0) path with your path
   const navigation = [
     { title: "Home", path: "/" },
     { title: "Membership", path: "/membership" },

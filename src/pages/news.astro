@@ -2,7 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 
 let res = await fetch(
-  "https://hermanuschessclub.co.za/wp-json/wp/v2/posts?per_page=100&_embed"
+  "https://wp.hermanuschessclub.co.za/wp-json/wp/v2/posts?per_page=100&_embed"
 );
 let posts = await res.json();
 ---
