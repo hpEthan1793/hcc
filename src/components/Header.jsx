@@ -78,7 +78,7 @@ export default (props) => {
           <div className="hidden md:inline-block">
             <ul className="flex items-center space-x-4">
               <li className="w-10 h-10 border rounded-full flex items-center justify-center">
-                <a href="https://facebook.com/HermanusChessClub">
+                <a href="https://facebook.com/HermanusChessClub" aria-label="Facebook">
                   <svg
                     class="svg-icon w-6 h-6 text-[#da2c26]"
                     xmlns="http://www.w3.org/2000/svg"
@@ -90,7 +90,7 @@ export default (props) => {
                 </a>
               </li>
               <li className="w-10 h-10 border rounded-full flex items-center justify-center">
-                <a href="https://www.instagram.com/Hermanus.Chess.Club/">
+                <a href="https://www.instagram.com/Hermanus.Chess.Club/" aria-label="Instagram">
                   <svg
                     class="svg-icon w-6 h-6 text-[#da2c26]"
                     xmlns="http://www.w3.org/2000/svg"
@@ -102,7 +102,7 @@ export default (props) => {
                 </a>
               </li>
               <li className="w-10 h-10 border rounded-full flex items-center justify-center">
-                <a href="https://www.youtube.com/@HermanusChessClub">
+                <a href="https://www.youtube.com/@HermanusChessClub" aria-label="Youtube">
                   <svg
                     class="svg-icon w-6 h-6 text-[#da2c26]"
                     xmlns="http://www.w3.org/2000/svg"
@@ -114,7 +114,7 @@ export default (props) => {
                 </a>
               </li>
               <li className="w-10 h-10 border rounded-full flex items-center justify-center">
-                <a href="mailto:info@hermanuschessclub.co.za">
+                <a href="mailto:info@hermanuschessclub.co.za" aria-label="Email">
                   <svg
                     class="svg-icon w-6 h-6 text-[#da2c26]"
                     xmlns="http://www.w3.org/2000/svg"
@@ -129,7 +129,7 @@ export default (props) => {
           </div>
         </div>
       </nav>
-      <div class="bg-[url('/banner.jpeg')] bg-cover bg-center bg-fixed h-[80vh] flex items-center justify-center bg-black/30 bg-blend-overlay">
+      <div class="bg-[url('/banner.jpeg')] bg-cover bg-center bg-fixed h-[85vh] flex items-center justify-center bg-black/30 bg-blend-overlay">
         <div class="text-center ">
           <h1 className="text-4xl text-gray-200 font-extrabold sm:text-5xl drop-shadow-2xl">
             {props.title}

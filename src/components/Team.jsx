@@ -69,7 +69,7 @@ export default () => {
                   </h4>
                   <p className="text-[#da2c26]">{item.title}</p>
                   <div className="mt-4 flex justify-center gap-4 text-gray-400">
-                    <a href={item.email}>
+                    <a href={item.email} aria-label="Email">
                       <svg
                         className="w-5 h-5 duration-150 hover:text-gray-500"
                         xmlns="http://www.w3.org/2000/svg"

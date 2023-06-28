@@ -56,11 +56,11 @@ export default () => {
           name: "Constitution",
         },
         {
-          href: "/coc.pdf",
+          href: "/code-of-conduct.pdf",
           name: "Code of Conduct",
         },
         {
-          href: "/sitemap.xml",
+          href: "https://hermanuschessclub.co.za/sitemap-index.xml",
           name: "Sitemap",
         },
         {
@@ -73,10 +73,10 @@ export default () => {
 
   return (
     <footer className="text-gray-500 bg-white px-4 py-5 max-w-screen-xl mx-auto md:px-8">
-      <div className="gap-6 justify-between md:flex">
+      <div className="gap-6 justify-between md:flex border-t pt-4">
         <div className="flex-1">
           <div className="max-w-xs">
-            <img src="/logo.png" className="w-32" />
+            <img src="/logo.png" className="w-32" alt="Hermanus Chess Club logo" />
             <p className="leading-relaxed mt-2 text-[15px]">
               The Home of Chess In Hermanus
             </p>
@@ -127,7 +127,7 @@ export default () => {
         <div className="mt-6 sm:mt-0">
           <ul className="flex items-center space-x-4">
             <li className="w-10 h-10 border rounded-full flex items-center justify-center">
-              <a href="https://facebook.com/HermanusChessClub">
+              <a href="https://facebook.com/HermanusChessClub" aria-label="Facebook">
                 <svg
                   class="svg-icon w-6 h-6 text-[#da2c26]"
                   xmlns="http://www.w3.org/2000/svg"
@@ -139,7 +139,7 @@ export default () => {
               </a>
             </li>
             <li className="w-10 h-10 border rounded-full flex items-center justify-center">
-              <a href="https://www.instagram.com/Hermanus.Chess.Club/">
+              <a href="https://www.instagram.com/Hermanus.Chess.Club/" aria-label="Instagram">
                 <svg
                   class="svg-icon w-6 h-6 text-[#da2c26]"
                   xmlns="http://www.w3.org/2000/svg"
@@ -151,7 +151,7 @@ export default () => {
               </a>
             </li>
             <li className="w-10 h-10 border rounded-full flex items-center justify-center">
-              <a href="https://www.youtube.com/@HermanusChessClub">
+              <a href="https://www.youtube.com/@HermanusChessClub" aria-label="Youtube">
                 <svg
                   class="svg-icon w-6 h-6 text-[#da2c26]"
                   xmlns="http://www.w3.org/2000/svg"
@@ -163,7 +163,7 @@ export default () => {
               </a>
             </li>
             <li className="w-10 h-10 border rounded-full flex items-center justify-center">
-              <a href="mailto:info@hermanuschessclub.co.za">
+              <a href="mailto:info@hermanuschessclub.co.za" aria-label="Email">
                 <svg
                   class="svg-icon w-6 h-6 text-[#da2c26]"
                   xmlns="http://www.w3.org/2000/svg"
