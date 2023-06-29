@@ -15,7 +15,7 @@ export default () => {
             className="space-y-5"
             name="contact"
             method="POST"
-            netlify
+            data-netlify="true"
           >
             <div className="flex flex-col items-center gap-y-5 gap-x-6 [&>*]:w-full sm:flex-row">
               <div>
