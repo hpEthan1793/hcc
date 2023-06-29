@@ -13,6 +13,7 @@ export default () => {
           <form
             onSubmit={(e) => e.preventDefault()}
             className="space-y-5"
+            name="Contact Us"
             netlify
           >
             <div className="flex flex-col items-center gap-y-5 gap-x-6 [&>*]:w-full sm:flex-row">
