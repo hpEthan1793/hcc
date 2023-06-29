@@ -4,7 +4,7 @@ import Layout from "../../layouts/Layout.astro";
 const { slug } = Astro.params;
 
 let res = await fetch(
-  `https://wp.hermanuschessclub.co.za/wp-json/wp/v2/posts?slug=${slug}`
+  `https://wp.hermanuschessclub.co.za/wp-json/wp/v2/posts?slug=${slug}&_embed`
 );
 let [post] = await res.json();
 
@@ -23,7 +23,7 @@ export async function getStaticPaths() {
 }
 ---
 
-<Layout title={post.title.rendered}>
+<Layout title={post.title.rendered} img={post._embedded["wp:featuredmedia"]["0"].source_url}>
   <h1
     set:html={post.title.rendered}
     class="text-4xl font-extrabold text-center m-2"
