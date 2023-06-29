@@ -11,7 +11,7 @@ export default () => {
         </div>
         <div className="mt-12 max-w-lg mx-auto">
           <form
-            onSubmit={(e) => e.preventDefault()}
+            action="/redirect"
             className="space-y-5"
             name="Contact Us"
             netlify
@@ -49,7 +49,7 @@ export default () => {
                 className="w-full mt-2 h-36 px-3 py-2 resize-none appearance-none bg-transparent outline-none border focus:border-[#da2c26] shadow-sm rounded-lg"
               ></textarea>
             </div>
-            <button className="w-full px-4 py-2 text-white font-medium bg-[#da2c26] hover:bg-red-400 active:bg-[#da2c26] rounded-lg duration-150">
+            <button type="submit" className="w-full px-4 py-2 text-white font-medium bg-[#da2c26] hover:bg-red-400 active:bg-[#da2c26] rounded-lg duration-150">
               Submit
             </button>
           </form>
