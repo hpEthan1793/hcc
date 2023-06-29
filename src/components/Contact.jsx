@@ -13,7 +13,8 @@ export default () => {
           <form
             action="/redirect"
             className="space-y-5"
-            name="Contact Us"
+            name="contact"
+            method="POST"
             netlify
           >
             <div className="flex flex-col items-center gap-y-5 gap-x-6 [&>*]:w-full sm:flex-row">
