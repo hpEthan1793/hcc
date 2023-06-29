@@ -20,6 +20,7 @@ export default () => {
               <div>
                 <label className="font-medium">First name</label>
                 <input
+                  name="First Name"
                   type="text"
                   required
                   className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-[#da2c26] shadow-sm rounded-lg"
@@ -28,6 +29,7 @@ export default () => {
               <div>
                 <label className="font-medium">Last name</label>
                 <input
+                  name="Last Name"
                   type="text"
                   required
                   className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-[#da2c26] shadow-sm rounded-lg"
@@ -37,6 +39,7 @@ export default () => {
             <div>
               <label className="font-medium">Email</label>
               <input
+                name="Email"
                 type="email"
                 required
                 className="w-full mt-2 px-3 py-2 text-gray-500 bg-transparent outline-none border focus:border-[#da2c26] shadow-sm rounded-lg"
@@ -45,11 +48,15 @@ export default () => {
             <div>
               <label className="font-medium">Message</label>
               <textarea
+                name="Message"
                 required
                 className="w-full mt-2 h-36 px-3 py-2 resize-none appearance-none bg-transparent outline-none border focus:border-[#da2c26] shadow-sm rounded-lg"
               ></textarea>
             </div>
-            <button type="submit" className="w-full px-4 py-2 text-white font-medium bg-[#da2c26] hover:bg-red-400 active:bg-[#da2c26] rounded-lg duration-150">
+            <button
+              type="submit"
+              className="w-full px-4 py-2 text-white font-medium bg-[#da2c26] hover:bg-red-400 active:bg-[#da2c26] rounded-lg duration-150"
+            >
               Submit
             </button>
           </form>
