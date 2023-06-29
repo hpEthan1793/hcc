@@ -16,6 +16,7 @@ export default () => {
             name="contact"
             method="POST"
             data-netlify="true"
+            data-netlify-recaptcha="true"
           >
             <div className="flex flex-col items-center gap-y-5 gap-x-6 [&>*]:w-full sm:flex-row">
               <div>
@@ -54,6 +55,7 @@ export default () => {
                 className="w-full mt-2 h-36 px-3 py-2 resize-none appearance-none bg-transparent outline-none border focus:border-[#da2c26] shadow-sm rounded-lg"
               ></textarea>
             </div>
+            <div data-netlify-recaptcha="true"></div>
             <button
               type="submit"
               className="w-full px-4 py-2 text-white font-medium bg-[#da2c26] hover:bg-red-400 active:bg-[#da2c26] rounded-lg duration-150"
