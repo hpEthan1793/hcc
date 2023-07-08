@@ -7,7 +7,7 @@ export default (props) => {
     { title: "Home", path: "/" },
     { title: "Membership", path: "/membership" },
     { title: "Leaderboard", path: "/leaderboard" },
-    { title: "News", path: "/news" },
+    { title: "News", path: "https://wp.hermanuschessclub.co.za" },
   ];
 
   return (

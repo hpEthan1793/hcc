@@ -18,7 +18,7 @@ export default () => {
           name: "Leaderboard",
         },
         {
-          href: "/news",
+          href: "https://hermanuschessclub.co.za",
           name: "News",
         },
       ],
