@@ -18,7 +18,7 @@ export default () => {
           name: "Leaderboard",
         },
         {
-          href: "https://hermanuschessclub.co.za",
+          href: "https://posts.hermanuschessclub.co.za",
           name: "News",
         },
       ],
@@ -76,7 +76,11 @@ export default () => {
       <div className="gap-6 justify-between md:flex border-t pt-4">
         <div className="flex-1">
           <div className="max-w-xs">
-            <img src="/logo.png" className="w-32" alt="Hermanus Chess Club logo" />
+            <img
+              src="/logo.png"
+              className="w-32"
+              alt="Hermanus Chess Club logo"
+            />
             <p className="leading-relaxed mt-2 text-[15px]">
               The Home of Chess In Hermanus
             </p>
@@ -127,7 +131,10 @@ export default () => {
         <div className="mt-6 sm:mt-0">
           <ul className="flex items-center space-x-4">
             <li className="w-10 h-10 border rounded-full flex items-center justify-center">
-              <a href="https://facebook.com/HermanusChessClub" aria-label="Facebook">
+              <a
+                href="https://facebook.com/HermanusChessClub"
+                aria-label="Facebook"
+              >
                 <svg
                   class="svg-icon w-6 h-6 text-[#da2c26]"
                   xmlns="http://www.w3.org/2000/svg"
@@ -139,7 +146,10 @@ export default () => {
               </a>
             </li>
             <li className="w-10 h-10 border rounded-full flex items-center justify-center">
-              <a href="https://www.instagram.com/Hermanus.Chess.Club/" aria-label="Instagram">
+              <a
+                href="https://www.instagram.com/Hermanus.Chess.Club/"
+                aria-label="Instagram"
+              >
                 <svg
                   class="svg-icon w-6 h-6 text-[#da2c26]"
                   xmlns="http://www.w3.org/2000/svg"
@@ -151,7 +161,10 @@ export default () => {
               </a>
             </li>
             <li className="w-10 h-10 border rounded-full flex items-center justify-center">
-              <a href="https://www.youtube.com/@HermanusChessClub" aria-label="Youtube">
+              <a
+                href="https://www.youtube.com/@HermanusChessClub"
+                aria-label="Youtube"
+              >
                 <svg
                   class="svg-icon w-6 h-6 text-[#da2c26]"
                   xmlns="http://www.w3.org/2000/svg"

@@ -7,7 +7,7 @@ export default (props) => {
     { title: "Home", path: "/" },
     { title: "Membership", path: "/membership" },
     { title: "Leaderboard", path: "/leaderboard" },
-    { title: "News", path: "https://wp.hermanuschessclub.co.za" },
+    { title: "News", path: "https://posts.hermanuschessclub.co.za" },
   ];
 
   return (
@@ -78,7 +78,10 @@ export default (props) => {
           <div className="hidden md:inline-block">
             <ul className="flex items-center space-x-4">
               <li className="w-10 h-10 border rounded-full flex items-center justify-center">
-                <a href="https://facebook.com/HermanusChessClub" aria-label="Facebook">
+                <a
+                  href="https://facebook.com/HermanusChessClub"
+                  aria-label="Facebook"
+                >
                   <svg
                     class="svg-icon w-6 h-6 text-[#da2c26]"
                     xmlns="http://www.w3.org/2000/svg"
@@ -90,7 +93,10 @@ export default (props) => {
                 </a>
               </li>
               <li className="w-10 h-10 border rounded-full flex items-center justify-center">
-                <a href="https://www.instagram.com/Hermanus.Chess.Club/" aria-label="Instagram">
+                <a
+                  href="https://www.instagram.com/Hermanus.Chess.Club/"
+                  aria-label="Instagram"
+                >
                   <svg
                     class="svg-icon w-6 h-6 text-[#da2c26]"
                     xmlns="http://www.w3.org/2000/svg"
@@ -102,7 +108,10 @@ export default (props) => {
                 </a>
               </li>
               <li className="w-10 h-10 border rounded-full flex items-center justify-center">
-                <a href="https://www.youtube.com/@HermanusChessClub" aria-label="Youtube">
+                <a
+                  href="https://www.youtube.com/@HermanusChessClub"
+                  aria-label="Youtube"
+                >
                   <svg
                     class="svg-icon w-6 h-6 text-[#da2c26]"
                     xmlns="http://www.w3.org/2000/svg"
@@ -114,7 +123,10 @@ export default (props) => {
                 </a>
               </li>
               <li className="w-10 h-10 border rounded-full flex items-center justify-center">
-                <a href="mailto:info@hermanuschessclub.co.za" aria-label="Email">
+                <a
+                  href="mailto:info@hermanuschessclub.co.za"
+                  aria-label="Email"
+                >
                   <svg
                     class="svg-icon w-6 h-6 text-[#da2c26]"
                     xmlns="http://www.w3.org/2000/svg"
