@@ -14,10 +14,40 @@ const { title, img } = Astro.props;
 <html lang="en">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{title}</title>
+
+		<meta name="title" content={title} />
+		<meta
+			name="description"
+			content="Our aim at the Hermanus Chess Club is to help grow chess in Hermanus as well as the greater Overberg region, by engaging in numerous chess development programs and stimulating chess for both youth and federation players. We are situated at the Hermanus Sports Club, open every Thursday afternoon from 15:30 until 18:00 in the evening. "
+		/>
+
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content={Astro.url} />
+		<meta property="og:title" content={title} />
+		<meta
+			property="og:description"
+			content="Our aim at the Hermanus Chess Club is to help grow chess in Hermanus as well as the greater Overberg region, by engaging in numerous chess development programs and stimulating chess for both youth and federation players. We are situated at the Hermanus Sports Club, open every Thursday afternoon from 15:30 until 18:00 in the evening. "
+		/>
+		<meta
+			property="og:image"
+			content="https://hermanuschessclub.co.za/banner.jpeg"
+		/>
+
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:url" content={Astro.url} />
+		<meta property="twitter:title" content={title} />
+		<meta
+			property="twitter:description"
+			content="Our aim at the Hermanus Chess Club is to help grow chess in Hermanus as well as the greater Overberg region, by engaging in numerous chess development programs and stimulating chess for both youth and federation players. We are situated at the Hermanus Sports Club, open every Thursday afternoon from 15:30 until 18:00 in the evening. "
+		/>
+		<meta
+			property="twitter:image"
+			content="https://hermanuschessclub.co.za/banner.jpeg"
+		/>
+
 		<link
 			rel="apple-touch-icon"
 			sizes="180x180"
@@ -74,6 +104,4 @@ const { title, img } = Astro.props;
 			box-sizing: border-box;
 		}
 	</style>
-
-
 </html>
